@@ -124,9 +124,9 @@ spec:
       podSelector:
         matchLabels:
           app: webapp
-  ports:
-  - port: 8080
-    protocol: TCP
+    ports:
+    - port: 8080
+      protocol: TCP
 ```
 save the file using `ESCAPE + :wq!`
 
