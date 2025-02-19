@@ -5,7 +5,7 @@
 Create a new project:
 
 ```
-oc new-project buildConfig-lab
+oc new-project buildconfig-lab
 ```
 Verify it
 ```
@@ -136,7 +136,7 @@ Access the Route:
 
 Delete the project:
 ```
-oc delete project buildConfig-lab
+oc delete project buildconfig-lab
 ```
 
 
