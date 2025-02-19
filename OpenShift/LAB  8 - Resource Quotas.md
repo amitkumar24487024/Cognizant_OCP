@@ -133,9 +133,6 @@ spec:
   - name: quota-ctr
     image: nginx
     resources:
-      limits:
-        memory: "800Mi"
-        cpu: "1000m"
       requests:
         memory: "600Mi"
         cpu: "350m"
