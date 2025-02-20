@@ -32,7 +32,7 @@ oc create quota rs-quota1 --hard=pods=2,services=1
 oc describe ns quota-lab
 ```
 ```
-oc get quota -n quota-lab
+oc get quota 
 ```
 **Declarative** (OR)
 ```
@@ -59,31 +59,31 @@ oc apply -f rq1.yaml
 oc describe ns quota-lab
 ```
 ```
-oc get quota -n quota-lab
+oc get quota 
 ```
 ```
-oc describe quota -n quota-lab
+oc describe quota 
 ```
 ```
-oc -n quota-lab run pod2 --image nginx --port 80
+oc  run pod2 --image nginx --port 80
 ```
 ```
-oc -n quota-lab expose pod pod2 --name pod2-svc --port 80 --type NodePort 
+oc  expose pod pod2 --name pod2-svc --port 80 --type NodePort 
 ```
 Try to deploying a new pod in namespace quota-lab
 ```
-oc -n quota-lab run pod3 --image nginx --port 80
+oc  run pod3 --image nginx --port 80
 ```
 **Once the the desire quota acheaved, It will not allow you to exceed the limit and you will get Frobidden Message.
 ##### Delete the quota, svc & pods created in previous steps
 ```
-oc delete quota rs-quota1 -n quota-lab
+oc delete quota rs-quota1 
 ```
 ```
-oc -n quota-lab delete pod --all
+oc  delete pod --all
 ```
 ```
-oc -n quota-lab delete svc --all
+oc  delete svc --all
 ```
 
 ### Task 3: Creating Resource Quota and Constraining Hardware Resources
@@ -113,11 +113,11 @@ oc apply -f rq2.yaml
 oc describe ns quota-lab
 ```
 ```
-oc describe quota -n quota-lab
+oc describe quota 
 ```
 ### Task 4: Verify Resource Quota Functionality
 ```
-oc -n quota-lab run pod4 --image nginx --port 80
+oc  run pod4 --image nginx --port 80
 ```
 ```
 vi pod5.yaml
@@ -146,7 +146,7 @@ oc apply -f pod5.yaml
 oc describe ns quota-lab
 ```
 ```
-oc describe quota -n quota-lab
+oc describe quota 
 ```
 ### Task 5 : Cleanup Resources
 
