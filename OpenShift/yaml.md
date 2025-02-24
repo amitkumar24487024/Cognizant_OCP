@@ -1,5 +1,6 @@
 
 ## hostPath
+```yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -18,9 +19,10 @@ spec:
     #volume type:
     hostPath:
       path: /volume #existing dir
-
+```
 
 ## emptyDir
+```yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -44,6 +46,6 @@ spec:
   - name: emptydir-volume
     #volume type:
     emptyDir: {}
-
+```
 
     
