@@ -95,5 +95,32 @@ spec:
     - name: test-vol
       mountPath: /scrub
 ```
-
+### Multi-ctr with Security Context
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multi-ctr-app
+  labels:
+    app: webapp
+spec:
+  securityContext:
+    runAsUser: 1000
+    runAsGroup: 3000
+    fsGroup: 5000
+  containers:
+  - name: app
+    image: httpd:latest
+    volumeMounts:
+    - mountPath: '/app'
+      name: emptydir-volume
+  - name: data
+    image: httpd:latest
+    volumeMounts:
+    - mountPath: '/dat'
+      name: emptydir-volume
+  volumes:
+  - name: emptydir-volume
+    emptyDir: {}
+```
     
