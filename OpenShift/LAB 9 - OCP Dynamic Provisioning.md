@@ -115,7 +115,7 @@ save the file using `ESCAPE + :wq!`
 
 Apply the definition yaml
 ```
-oc apply -f pod.yaml
+oc apply -f ebs-pod.yaml
 ```
 
 Verify the POD
