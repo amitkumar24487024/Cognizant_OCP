@@ -109,16 +109,18 @@ spec:
     runAsGroup: 3000
     fsGroup: 5000
   containers:
-  - name: app
-    image: httpd:latest
+  - name: ctr-1
+    image: busybox:1.28
+    command: [ "sh", "-c", "sleep 1h" ]
     volumeMounts:
-    - mountPath: '/app'
-      name: emptydir-volume
-  - name: data
-    image: httpd:latest
+    - name: sec-ctx-vol
+      mountPath: /data/demo
+  - name: ctr-2
+    image: busybox:1.28
+    command: [ "sh", "-c", "sleep 1h" ]
     volumeMounts:
-    - mountPath: '/dat'
-      name: emptydir-volume
+    - name: sec-ctx-vol
+      mountPath: /docs/
   volumes:
   - name: emptydir-volume
     emptyDir: {}
