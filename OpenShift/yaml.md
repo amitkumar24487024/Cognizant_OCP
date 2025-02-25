@@ -113,13 +113,13 @@ spec:
     image: busybox:1.28
     command: [ "sh", "-c", "sleep 1h" ]
     volumeMounts:
-    - name: sec-ctx-vol
+    - name: emptydir-volume
       mountPath: /data/demo
   - name: ctr-2
     image: busybox:1.28
     command: [ "sh", "-c", "sleep 1h" ]
     volumeMounts:
-    - name: sec-ctx-vol
+    - name: emptydir-volume
       mountPath: /docs/
   volumes:
   - name: emptydir-volume
