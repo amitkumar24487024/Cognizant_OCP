@@ -2,7 +2,7 @@
 setting up Helm on Kubernetes
 Run the following command to update the packages:
 ```
-apt update
+yum update
 ```
 Download the Helm binary for Linux 386 architecture:
 ```
