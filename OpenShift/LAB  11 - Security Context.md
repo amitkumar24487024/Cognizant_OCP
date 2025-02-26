@@ -68,7 +68,7 @@ exit
 ```
 Get a shell into the ctr-2 Container:
 ```
-kubectl exec -it security-context-new -c ctr-2 -- sh
+kubectl exec -it security-context -c ctr-2 -- sh
 ```
 ```
 id
