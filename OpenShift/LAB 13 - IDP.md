@@ -35,7 +35,7 @@ htpasswd -b htpasswd devloper devloper
 
 Verify the file
 ```
-cat htpasswdfile
+cat htpasswd
 ```
 
 ### Task 3 : Users in OpenShift
