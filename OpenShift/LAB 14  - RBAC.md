@@ -31,7 +31,9 @@ kubectl get deployment -n kubernetes-dashboard -o wide
 ```
 kubectl get svc -n kubernetes-dashboard -o wide
 ```
-To access the service outside the cluster, edit the service type from ClusterIP to NodePort using the following command:
+To access the service outside the cluster, edit the service type from ClusterIP to NodePort/LoadBalancer using the following command:
+Or You can keep ClusterIP service and create royte to access `Kubernetes Dashboard` on Oc Level
+
 ```
 kubectl edit svc -n kubernetes-dashboard kubernetes-dashboard
 ```
